@@ -14,9 +14,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'fontawesome-free',
-    'django_sass',
     
     'django.contrib.sites',
     'allauth',
