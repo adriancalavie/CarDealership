@@ -1,6 +1,6 @@
 # SAMURAI
 
-This is an car dealership app made in Django.
+This is a car dealership app made in Django.
 ## Tech Stack
 * Python(Django) 🐍
 * allauth 🔑
