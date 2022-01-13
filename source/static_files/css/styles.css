@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@400;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  height: 100%;
+}
+
+span {
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+small {
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-weight: 400;
+}
+
+p{
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-weight: 400;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+button.menu_item{
+  color: #171717;
+  transition: cubic-bezier(0.895, 0.03, 0.685, 0.22) color;
+  pointer-events: none;
+}
+
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.ar{
+  text-align: right;
+  justify-self: center;
+  justify-content: center;
+  justify-items: center;
+  width: fit-content;
+}
+
+.menu_item:hover{
+  color: #FF4800;
+}
+
+.logo{
+  color: #171717;
+  transition: cubic-bezier(0.895, 0.03, 0.685, 0.22) color;
+  cursor:pointer;
+}
+
+.logo:hover{
+  color: #FF4800;
+}
+
+.nav_container {
+  height: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}
+
+.nav_list {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  align-items: center;
+  transition: 200ms linear width;
+}
+
+.nav_items {
+  font-weight: 900;
+  font-size: 1.3rem;
+  list-style: none;
+  color: #171717;
+}
+
+.nav_items:last-child {
+  height: 36px;
+}
+
+.menu_items > a {
+  text-decoration: none;
+  color: #171717;
+}
+
+.bordered{
+  border:#171717 0.25rem solid;
+  padding: 10px;
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  margin: auto;
+  width: 50%;
+  background-color: #171717;
+  color: white;
+  margin-top: 50px;
+}
+
+.btn-container:hover{
+  background-color: #FF4800;
+  border-color: #FF4800;
+}
+
+.card{
+  border-color: #171717;
+  background-color: #171717;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card:hover{
+  border-color: #FF4800;
+  background-color: #FF4800;
+}
+
+.car-title{
+  font-size: 3.5rem;
+}
+
+.car-description{
+  font-size: 2rem;
+  text-align: left;
+}
+
+.card-content{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.car-image{
+  width: 100%;
+  height: 100%;
+  /* background-image:url(https://i.bstr.es/topventas/2020/09/tesla_model_3_34.jpeg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* transition: cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.2s; */
+}
+
+/* .car-image:hover{
+  background-image: url(https://espirituracer.com/archivos/2017/11/Tesla-Model-3-Up.jpg);
+} */
+
+.container{
+  width: 80%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.page-content{
+  display: flex;
+  justify-self: left;
+}
+
+.section{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  grid-auto-rows: minmax(500px, auto);
+  gap: 20px;
+  width: 100%;
+ }
+
+.title{
+  text-align: left;
+  color: #171717;
+  font-size: larger;
+}
+
+.car-tag{
+  color: white;
+  font-weight: 200;
+  z-index: 1;
+  justify-self: center;
+}
+
+.top20{
+  top: 15%;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transition: 200ms opacity;
+  border: #171717;
+  border-width: medium;
+  border-radius: 0.25rem;
+}
+
+.menu_items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin: 0 auto;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 1000px;
+  padding-top: 4rem;
+}
+
+.menu_items > a:nth-child(1) {
+  align-self: flex-end;
+}
+
+.menu_items > a:nth-child(2) {
+  align-self: flex-start;
+}
+
+.menu_items > a:nth-child(3) {
+  align-self: flex-start;
+  margin-left: 45%;
+}
+
+.menu_label {
+  font-weight: 800;
+  font-size: 6rem;
+  transition: 200ms;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color:#171717;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.menu {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0;
+  transition: 200ms opacity;
+}
+
+@media screen and (max-width: 660px) {
+  .nav_list > .nav_items:nth-child(2),
+  .nav_list > .nav_items:nth-child(3) {
+    display: none;
+  }
+
+  .menu_label {
+    font-size: 4rem;
+  }
+
+  .social_labels,
+  .copyright {
+    font-size: 1rem;
+  }
+
+  .menu_items > a:nth-child(3),
+  .menu_items > a:nth-child(2),
+  .menu_items > a:nth-child(1) {
+    margin: auto;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close_Btn {
+  display: none;
+}

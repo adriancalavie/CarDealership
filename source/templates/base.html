@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SAMURAI Cars</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?93977">
+    <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    {% comment %} <script src="{% static 'js/app.js' %}"></script> {% endcomment %}
+</head>
+<body>
+
+    <div>
+        {% block content %}
+            
+        {% endblock content %}
+        <header>
+          <nav class="nav_container">
+            <ul class="nav_list">
+              <li class="nav_items">
+                <button class="logo disable-select" onclick="navigate('/')">
+                  <span>
+                    SAMURAI
+                  </span>
+                  <small>
+                  <small>
+                    [car dealership]
+                  </small>
+                </button>
+              </li>
+      
+              <li class="nav_items">
+                <button onclick="setIsMenuOpen()">
+                  <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36px" height="36px" class="open_Btn">
+                    <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z" />
+                  </svg>
+                  <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="36px" height="36px" class="close_Btn">
+                    <path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div class="menu" style="display: none; visibility: hidden;">
+    
+          <div class="menu_items disable-select">
+            <button class="menu_item" onclick=" navigate('/browse')" disabled="true">
+              <span class="menu_label">
+                /CARS
+              </span>
+              <small>
+                01
+              </small>
+            </button>
+            <button class="menu_item" onclick=" navigate('/browse/featured')"  disabled="true">
+              <span class="menu_label">
+                /FEATURED
+              </span>
+              <small>
+                02
+              </small>
+            </button>
+            <button class="menu_item" onclick=" navigate('/user')"  disabled="true">
+              <span class="menu_label">
+                /PROFILE
+              </span
+              ><small>
+                03
+              </small>
+            </button>
+          </div>
+          <div class="copyright">
+            <span>ALL RIGHTS RESERVED</span>
+          </div>
+        </div>
+      </div>
+    <script src="{% static 'js/app.js' %}?43276"></script>
+</body>
+</html>

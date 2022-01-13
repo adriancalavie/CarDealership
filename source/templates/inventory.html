@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+   <div class="main">
+    <div class="container">
+        <div class="page-content">
+            <h1 class="title">
+                <span>
+                    {% block page %} 
+                    /INVENTORY
+                    {% endblock page %}
+                </span>
+            </h1>
+        </div>
+        <div class="section">
+                   
+            {% for car in cars %}
+                    <div class="card bordered" onclick="navigate('{{car.get_absolute_url}}')">
+                        <div class="card-content">
+                            <div class="car-image"  style="background-image: url('{{car.primary_image}}');">
+                            </div>
+                        </div>
+                        <span class="car-tag disable-select">
+                            {{car.title}}
+                        </span>
+                    </div>
+            {% endfor %}    
+       </div>
+    </div>
+   </div>
+
+{% endblock content %}
+

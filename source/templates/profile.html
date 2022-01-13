@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load account %}
+
+{% block content %}
+    <div class="main">
+        {% if user.is_authenticated %}
+            <div class="container disable-select">
+                <div class="page-content">
+                    <h1 class="title">
+                        <span>
+                            WELCOME, {{user.first_name|upper}} {{user.last_name|upper}}
+                        </span>
+                        <small>
+                            [{{user.email|lower}}]
+                        </small>
+                    </h1>
+                </div>
+                <h1 class="title">
+                    <span>
+                        /YOUR DEALS
+                    </span>
+                    <small>
+                        [{{orders|length}}]
+                    </small>
+                </h1>
+                <div class="section">
+                    {% comment %} onclick="navigate('{{order.get_absolute_url}}')" {% endcomment %}
+                    {% for order in orders %}
+                        <div class="card bordered" >
+                            <div class="card-content">
+                                <div class="car-image"  style="background-image: url('{{order.car.primary_image}}');">
+                                </div>
+                            </div>
+                            <span class="car-tag disable-select">
+                                {{order.car.title}} on {{order.ordered_date}}
+                            </span>
+                        </div>
+                    {% endfor %}    
+                </div>
+
+                <div class="btn-container bordered" onclick="navigate('accounts/logout')">
+                    <div>
+                        <span >LOG OUT</span>
+                    </div>
+               </div>
+            </div>
+        {% else %}
+            <span><a href="/accounts/signup/">Sign Up</a></span>
+
+        {% endif %}
+        
+    </div>    
+            
+{% endblock content %}
+

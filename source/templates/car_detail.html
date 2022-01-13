@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="main">
+        <div class="container disable-select">
+            <div class="page-content">
+                <h1 class="title car-title">
+                    <span>
+                        /{{object.title}}
+                    </span>
+                    
+                    {% if object.featured %}
+                        <small>[featured]</small>
+                    {% endif %}
+                        
+                </h1>
+                
+            </div>
+            <p class="car-description"> 
+                {{object.description}}
+            </p>
+            <span>
+                /IMAGES
+            </span>
+            {% comment %} <div class="car-image"  style="background-image: url('{{object.primary_image}}');">
+            </div> {% endcomment %}
+
+            <img src="{{object.primary_image}}" alt="primary">
+            <small>[01]</small>
+            <img src="{{object.secondary_image}}" alt="secondary">
+            <small>[02]</small>
+
+            
+            <div class="btn-container bordered" onclick="navigate('{{object.get_buy_url}}')">
+                 <div>
+                     <span >{{object.price}}</span>
+                     <small>[$]</small>
+                 </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}
+
