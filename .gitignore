@@ -33,6 +33,7 @@ eggs/
 .eggs/
 lib/
 scripts/
+Scripts/
 lib64/
 parts/
 sdist/
